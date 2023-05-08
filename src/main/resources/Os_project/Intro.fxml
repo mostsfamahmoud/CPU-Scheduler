@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Os_project.Intro_Controller">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: black;">
+         <children>
+            <Button layoutX="656.0" layoutY="539.0" mnemonicParsing="false" onAction="#onNextbtn" prefHeight="74.0" prefWidth="164.0" style="-fx-background-color: #609e50;" text="Next">
+               <font>
+                  <Font name="System Bold Italic" size="37.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="272.0" layoutY="264.0" prefHeight="122.0" prefWidth="502.0" text="CPU Scheduler" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="59.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3419552445411682" green="0.6700000166893005" blue="0.3149000108242035" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.7215686440467834" blue="0.5607843399047852" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ImageView fx:id="imageView" fitHeight="233.0" fitWidth="245.0" layoutX="60.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Assets/icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

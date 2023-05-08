@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Os_project.FCFS_SJF_Controller">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="btn3" layoutX="610.0" layoutY="573.0" mnemonicParsing="false" onAction="#onNonLiveSchedulingbutton" prefHeight="52.0" prefWidth="210.0" style="-fx-background-color: #609e50;" text="Non-Live Schedualing">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="104.0" layoutY="23.0" prefHeight="63.0" prefWidth="167.0" text="CPU Scheduler" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3419552445411682" green="0.6700000166893005" blue="0.3149000108242035" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.7215686440467834" blue="0.5607843399047852" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ImageView fx:id="imageView" fitHeight="63.0" fitWidth="57.0" layoutX="40.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Assets/icon.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="317.0" layoutY="86.0" prefHeight="42.0" prefWidth="217.0" text="Processes Details" textFill="#db6816">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn2" layoutX="369.0" layoutY="573.0" mnemonicParsing="false" onAction="#OnLiveSchedulingButton" prefHeight="52.0" prefWidth="210.0" style="-fx-background-color: #609e50;" text="Live Schedualing">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn1" layoutX="30.0" layoutY="573.0" mnemonicParsing="false" onAction="#onBackbutton" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #609e50;" text="Back">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Button>
+            <VBox layoutX="32.0" layoutY="144.0" prefHeight="394.0" prefWidth="788.0">
+               <children>
+                  <TreeTableView fx:id="TableView" editable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="414.0" prefWidth="796.0" style="-fx-background-color: WHITE;">
+                     <columns>
+                        <TreeTableColumn fx:id="PN" prefWidth="256.79997634887695" text="Process Name" />
+                        <TreeTableColumn fx:id="AT" prefWidth="286.4000244140625" text="Arrival Time (Sec)" />
+                        <TreeTableColumn fx:id="BT" prefWidth="255.99993896484375" text="Burst Time (Sec)" />
+                     </columns>
+                  </TreeTableView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Os_project.Selection_Controller">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutX="146.0" layoutY="56.0" prefHeight="55.0" prefWidth="305.0" text="CPU Scheduler" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="38.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.19318181456941547" startY="0.19696965362086444">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3419552445411682" green="0.6700000166893005" blue="0.3149000108242035" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.7215686440467834" blue="0.5607843399047852" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ImageView fx:id="imageView" fitHeight="116.0" fitWidth="127.0" layoutX="40.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Assets/icon.png"/>
+               </image>
+            </ImageView>
+            <Spinner fx:id="MySpinner" editable="true" layoutX="589.0" layoutY="187.0" prefHeight="42.0" prefWidth="147.0" />
+            <Label layoutX="43.0" layoutY="268.0" prefHeight="46.0" prefWidth="320.0" text="Select an Algorithm :">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.0909091035525004" startY="0.2689394228386156">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3419552445411682" green="0.6700000166893005" blue="0.3149000108242035" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.7215686440467834" blue="0.5607843399047852" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label alignment="CENTER" layoutX="541.0" layoutY="135.0" prefHeight="42.0" prefWidth="244.0" text="Number of Processes :">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.12500000722480542" startY="0.19696974031852948">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3419552445411682" green="0.6700000166893005" blue="0.3149000108242035" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.7215686440467834" blue="0.5607843399047852" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <RadioButton fx:id="RB1" layoutX="79.0" layoutY="343.0" mnemonicParsing="false" onAction="#OnFCFSButton" opacity="0.89" prefHeight="32.0" prefWidth="134.0" text="FCFS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Algorithms" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="RB2" layoutX="79.0" layoutY="409.0" mnemonicParsing="false" onAction="#OnSJFNP_Button" opacity="0.89" prefHeight="32.0" prefWidth="282.0" text="SJF (Non-Preemptive)" textFill="WHITE" toggleGroup="$Algorithms">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="RB4" layoutX="457.0" layoutY="344.0" mnemonicParsing="false" onAction="#OnRoundRobinButton" opacity="0.89" prefHeight="32.0" prefWidth="263.0" text="Round Robin (RR)" textFill="WHITE" toggleGroup="$Algorithms">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="RB5" layoutX="457.0" layoutY="408.0" mnemonicParsing="false" onAction="#OnPriorityNP_Button" opacity="0.89" prefHeight="32.0" prefWidth="348.0" text="Priority (Non Preemptive) " textFill="WHITE" toggleGroup="$Algorithms">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="RB6" layoutX="457.0" layoutY="473.0" mnemonicParsing="false" onAction="#OnPriorityP_Button" opacity="0.89" prefHeight="32.0" prefWidth="313.0" text="Priority (Preemptive) " textFill="WHITE" toggleGroup="$Algorithms">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="RB3" layoutX="79.0" layoutY="474.0" mnemonicParsing="false" onAction="#OnSJFP_Button" opacity="0.89" prefHeight="32.0" prefWidth="244.0" text="SJF (Preemptive)" textFill="WHITE" toggleGroup="$Algorithms">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </RadioButton>
+            <Button layoutX="658.0" layoutY="561.0" mnemonicParsing="false" onAction="#onNextbutton" prefHeight="55.0" prefWidth="147.0" style="-fx-background-color: #609e50;" text="Next">
+               <font>
+                  <Font name="System Bold Italic" size="27.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

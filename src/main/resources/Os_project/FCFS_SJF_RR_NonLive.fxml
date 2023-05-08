@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Os_project.FCFS_SJF_RR_NonLive_Controller">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="105.0" layoutY="23.0" prefHeight="63.0" prefWidth="167.0" text="CPU Scheduler" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3419552445411682" green="0.6700000166893005" blue="0.3149000108242035" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.7215686440467834" blue="0.5607843399047852" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ImageView fx:id="imageView" fitHeight="63.0" fitWidth="57.0" layoutX="40.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Assets/icon.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="553.0" layoutY="37.0" prefHeight="36.0" prefWidth="134.0" text="Processes Details" textFill="#db6816">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn1" layoutX="19.0" layoutY="576.0" mnemonicParsing="false" onAction="#onBackbutton" prefHeight="5.0" prefWidth="134.0" style="-fx-background-color: #609e50;" text="Back">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Button>
+            <VBox layoutX="420.0" layoutY="76.0" prefHeight="234.0" prefWidth="401.0">
+               <children>
+                  <TreeTableView fx:id="TableView" editable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="325.0" prefWidth="687.0" style="-fx-background-color: WHITE;">
+                     <columns>
+                        <TreeTableColumn fx:id="PN" prefWidth="135.99996948242188" text="Process Name" />
+                        <TreeTableColumn fx:id="AT" minWidth="0.0" prefWidth="131.99993896484375" text="Arrival Time" />
+                        <TreeTableColumn fx:id="BT" prefWidth="135.2000732421875" text="Burst Time " />
+                     </columns>
+                  </TreeTableView>
+               </children>
+            </VBox>
+            <TextField fx:id="turnAround" layoutX="153.0" layoutY="160.0" />
+            <TextField fx:id="waitingTime" layoutX="153.0" layoutY="250.0" />
+            <Label layoutX="23.0" layoutY="126.0" text="Avg. Turnaround Time:" textFill="#db6816">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="220.0" text="Avg. Waiting Time:" textFill="#db6816">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="363.0" layoutY="358.0" prefHeight="30.0" prefWidth="127.0" text="Gantt Chart" textFill="#db6816">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Canvas fx:id="myCanvas" height="135.0" layoutX="19.0" layoutY="415.0" width="816.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
